@@ -27,6 +27,7 @@ namespace ConsoleFWKILoggerDIDemo.Modern
                 configure.AddConfiguration(config.GetSection("Logging"));
                 configure.AddConsole();
                 configure.AddEventLog();
+                configure.AddLegacyTraceLogger();
             });
             return serviceDescriptors.BuildServiceProvider();
         }

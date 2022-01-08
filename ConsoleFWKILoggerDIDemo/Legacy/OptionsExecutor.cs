@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleFWKILoggerDIDemo
 {
+
     class OptionsExecutor
     {
         internal void Execute()
