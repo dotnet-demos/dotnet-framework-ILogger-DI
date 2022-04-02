@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("WebAPIFWKILoggerDIDemo")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("KPMG")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("WebAPIFWKILoggerDIDemo")]
-[assembly: AssemblyCopyright("Copyright © KPMG 2022")]
+[assembly: AssemblyCopyright("Copyright © 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
