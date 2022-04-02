@@ -9,6 +9,8 @@ Using .Net Core programming model of ILogger and DI in legacy .Net Framework app
 
 - This shows how a legacy .Net Framework WebAPI application can be modernized with DI and ILogger usage
 
+For using modern DI with legacy ASP.Net MVC apps refer [this sample](https://github.com/ryandle/MVC_WebApi_DI_Example)
+
 # Handling appsettings.json
 The file needs to be in the PWD to configure logging.
 
