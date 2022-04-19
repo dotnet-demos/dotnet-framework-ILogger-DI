@@ -8,9 +8,9 @@ namespace ConsoleFWKILoggerDIDemo
         public static void WriteLine(string message)
         {
 #if DEBUG
-            Console.WriteLine(message);
+            Console.WriteLine($"{DateTime.Now}:{message}");
 #endif
-            Trace.WriteLine(message);
+            Trace.WriteLine($"{DateTime.Now}:{message}");
         }
     }
 }

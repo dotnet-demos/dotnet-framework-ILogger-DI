@@ -6,9 +6,9 @@ namespace ConsoleFWKILoggerDIDemo.Modern
     {
         private bool disposedValue;
 
-        public ILogger CreateLogger(string categoryName)
+         ILogger ILoggerProvider.CreateLogger(string categoryName)
         {
-            return new LegacyTraceLogger();
+            return new LegacyTraceLogger(categoryName);
         }
 
         protected virtual void Dispose(bool disposing)

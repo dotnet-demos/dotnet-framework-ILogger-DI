@@ -175,7 +175,7 @@
     <Compile Include="Modern\IPiValueProvider.cs" />
     <Compile Include="Modern\LegacyTraceLoggerExtensions.cs" />
     <Compile Include="Modern\LegacyTraceLoggerProvider.cs" />
-    <Compile Include="Modern\Orchestrator.cs" />
+    <Compile Include="Modern\AreaOptionOrchestrator.cs" />
     <Compile Include="Modern\LegacyTraceLogger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -16,7 +16,7 @@ namespace ConsoleFWKILoggerDIDemo.Modern
         }
         private ServiceProvider ConfigureServices(ServiceCollection serviceDescriptors)
         {
-            serviceDescriptors.AddSingleton<IOrchestrator, Orchestrator>();
+            serviceDescriptors.AddSingleton<IOrchestrator, AreaOptionOrchestrator>();
             serviceDescriptors.AddSingleton<ICircleAreaCalculator, CircleAreaCalculator>();
             serviceDescriptors.AddSingleton<IPiValueProvider, HardCodedPiValueProvider>();
             IConfiguration config = new ConfigurationBuilder()

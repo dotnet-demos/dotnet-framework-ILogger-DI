@@ -6,6 +6,12 @@ namespace ConsoleFWKILoggerDIDemo.Modern
 {
     class LegacyTraceLogger : ILogger
     {
+        string category;
+        readonly string newLine = Environment.NewLine;
+        public LegacyTraceLogger(string categoryName)
+        {
+            this.category = categoryName;
+        }
         private static object _lock = new object();
         IDisposable ILogger.BeginScope<TState>(TState state)
         {
@@ -23,10 +29,12 @@ namespace ConsoleFWKILoggerDIDemo.Modern
             {
                 lock (_lock)
                 {
-                    var n = Environment.NewLine;
                     string exc = "";
-                    if (exception != null) exc = exception.GetType() + ": " + exception.Message + n + exception.StackTrace + n;
-                    MyTracer.WriteLine( logLevel.ToString() + ": " + DateTime.Now.ToString() + " " + formatter(state, exception) + n + exc);
+                    if (exception != null)
+                    {
+                        exc = $"{exception.GetType()}:{exception.Message}{newLine} {exception.StackTrace}";
+                    }
+                    MyTracer.WriteLine($"{logLevel}:{category}:{formatter(state, exception)} {newLine}  {exc}");
                 }
             }
         }
